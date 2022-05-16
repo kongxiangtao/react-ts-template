@@ -1,4 +1,3 @@
-import 'animate.css';
 import './App.css';
 import ComboBarrage from './components/ComboBarrage';
 

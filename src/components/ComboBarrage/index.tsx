@@ -2,6 +2,7 @@ import { FC, useEffect, useState, memo, useRef } from 'react';
 import AnimatedNumber from 'react-animated-number-ts';
 import { v4 as uuidv4 } from 'uuid';
 import produce from "immer";
+import 'animate.css';
 import './style.less';
 
 const ComboBarrage: FC = () => {
@@ -10,7 +11,7 @@ const ComboBarrage: FC = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            if (queueListRef.current.length > 0 && barrageList.length < 4) {
+            if (queueListRef.current.length > 0 && barrageList.length < 3) {
                 // console.log('interval queueListRef Size', queueListRef.current.length);
                 const msg = queueListRef.current.shift();
                 if (msg !== undefined) {
@@ -118,7 +119,8 @@ const BarrageItem: FC<BarrageItemProps> = (props) => {
             className={`barrage-item animate__animated ${animateClass}`}
             onAnimationEnd={(e) => {
                 if (e.animationName === 'fadeInLeftBig') {
-                    setAnimateClass('animate__backOutRight animate__delay-2s');
+                    setAnimateClass('animate__fadeOutUp animate__delay-1s');
+                    // setAnimateClass('animate__backOutRight animate__delay-2s');
                 } else {
                     props?.done?.(props.msgId);
                 }
