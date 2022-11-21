@@ -106,7 +106,7 @@ const BarrageItem: FC<BarrageItemProps> = (props) => {
         const timoutDone = setTimeout(() => {
             props?.done?.(props.msgId);
             // console.log('timoutDone', props.msgId);
-        }, 4000);
+        }, 3000);
 
         return () => {
             clearTimeout(timeout);
