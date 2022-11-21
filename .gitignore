@@ -4,6 +4,7 @@ yarn-error.log
 package-lock.json
 .idea
 build
+dist
 *.php
 build.sh
 

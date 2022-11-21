@@ -1,11 +1,11 @@
-import 'animate.css';
 import './App.css';
+import ComboBarrage from './components/ComboBarrage';
 
 function App() {
     return (
         <div className="App">
             <div className="App-header">
-                Welcome to React
+                <ComboBarrage/>
             </div>
         </div>
     );
